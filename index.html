@@ -1,0 +1,88 @@
+<!--
+******************************************************************
+* Author: Khalid Mahmood
+* Assignment: WE4.0 Mobile Web Applications, 
+* Date : 2016/07/06
+******************************************************************
+-->
+
+
+<!-- document type declaration -->
+<!DOCTYPE html>
+<html lang="en">
+    
+
+  <!-- Head Tag Started -->
+  <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      
+      <!-- Page Title -->
+      <title>Things to do App</title>
+
+
+      <!-- JQuery Mobile CSS-->
+      <link rel="stylesheet" href="js/jquery.mobile-1.4.5.min.css" />
+     
+       <!-- Customized CSS-->
+      <link rel="stylesheet" href="css/Appstyles.css" />
+
+  </head>
+  <!-- Head Tag Ended -->
+
+  
+
+  <!-- Body Started -->
+  <body ng-app="todoApp">
+      <!-- Controller -->
+      <div class="container "  data-ng-controller="mainController">
+
+      <!-- header Started -->
+      <div data-role="header" data-position="fixed" class="center">
+          <!-- Add item in To Do List  (Form) -->
+          <form name="itemForm" ng-submit="addNewItem()"><!-- on form submission "addNewItem()" function will call and data will push in scope (todoList)-->
+            <input type="text" name="todoList.item" id="text-basic" placeholder="Add your To Do list" data-ng-model="todoList.item" required/>
+            <button ng-disabled="itemForm.$invalid" class="ui-btn ui-btn-inline ui-icon-plus ui-btn-icon-left">Add</button>
+          </form>
+      </div>
+       <!-- header Ended -->
+
+      <div>
+	       <!-- To Do List items display -->
+        <ul>
+  		    <li ng-repeat="currentItems in todoList" >
+            
+            <span><input type="checkbox" ng-model="currentItems.done"/></span><!-- Checkbox use to select items for deletion from the TO DO List -->
+            
+            <span  ng-class="{'done':currentItems.done}">{{currentItems.item}}</span><!-- "done" CSS class will call if checkbox value is true--> 
+         </li>
+        </ul>	
+      </div>
+
+      <!-- footer Started -->
+      <div data-role="footer" data-position="fixed" class="center">
+        <button ng-click="deleteItem()" class="ui-btn ui-icon-delete ui-btn-icon-left ui-shadow-icon">Remove Selected items</button><!-- on click "deleteItem()" function will call to remove selected items from scope (todoList) -->
+      </div>
+      <!-- footer Ended -->
+
+      </div>
+ 
+
+
+      <!-- Jquery File -->
+      <script src="js/jquery-1.11.1.min.js"></script>
+
+      <!-- Jquery Mobile file -->
+      <script src="js/jquery.mobile-1.4.5.min.js"></script>
+
+      <!-- Anugular file -->
+      <script type="text/javascript" src="js/angular.min.js"></script>
+
+      <!-- Controller JS file -->
+      <script type="text/javascript" src="js/controller.js"></script>
+
+  </body>
+  <!-- Body Ended -->
+
+</html>

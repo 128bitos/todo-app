@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<widget     xmlns       =   "http://www.w3.org/ns/widgets"
+            xmlns.gap   =   "http://phonegap.com/ns/1.0"
+            id          =   "com.khalidmahmood.todoapp" 
+            versionCode =   "1"
+            version     =   "1.0.0">
+
+        <name>Things to do App</name>
+
+
+        <description>
+           Things to do App designed to manage your Thing to do list
+        </description>
+
+        <!-- Author Details -->
+        <author email="khalid.mahmood@webelevate.ie" href="https://build.phonegap.com">
+            Khalid Mahmood 
+        </author>
+
+        
+        <!--preference elements (this app only published in android hence other Platform preference aren't included-->
+        <preference name="Fullscreen"           value="false" />
+        <preference name="Orientation"          value="portrait" />
+        <preference name="android-installLocation"    value="internalOnly" />  
+        
+         <!-- Define app icon for android platform. -->
+        <icon src="icon.png" />
+       
+        
+</widget>
+
+
+
+
+
+
+
+
+
+
