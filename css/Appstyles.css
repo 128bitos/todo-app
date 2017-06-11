@@ -8,38 +8,26 @@
 ******************************************************************
 **/
 
-
 .done
 {
 	 color: #FF3600;
 	 font-style: oblique;
 	text-decoration: line-through;
 	text-shadow: 0px 0px #FF3600;
-
 }
-
-	
 
       
 ul 
 {
         list-style-type: none;
-    	
     	margin-left: 10px;
 }
-
-
-
 
 .center 
 
 {
-
 	text-align: center;
-
 }
-
-
 
 .ui-overlay-a, .ui-page-theme-a, .ui-page-theme-a .ui-panel-wrapper
 {
@@ -50,14 +38,10 @@ ul
 }
 
 
-
  .ui-page-theme-a .ui-bar-inherit,  html body .ui-group-theme-a .ui-bar-inherit 
 {
     background-color: #3b3b3a;
-    
 }
-
-
 
 .ui-checkbox input 
 {
